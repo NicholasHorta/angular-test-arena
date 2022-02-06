@@ -1,0 +1,13 @@
+<div>
+    <h1>Structural Directives</h1>
+    <section *bannerHide="5000; after placeholder" class="banner">
+        <h2>Temporary Warning</h2>
+        <p>This warning will disappear in 5 seconds</p>
+    </section>
+    <ng-template #placeholder>
+        <section class="placeholder">
+            <h2>Transitional Advice</h2>
+            <p>This will now remain here for a bit</p>
+        </section>
+    </ng-template>
+</div>
