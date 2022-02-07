@@ -1,15 +1,21 @@
 <div>
     <h1>Structural Directives</h1>
-    <section *advancedDir="9000 as time; post placeholder" class="banner">
+    <section *advancedDir="2000 as time; post placeholder; let count = counter; let advanced = advancedDir; let myDefaultImplicit" class="banner">
         <h2>Temporary Warning</h2>
-        <p>This warning will disappear in {{time}} seconds</p>
+        <p>This warning will disappear in {{time}} seconds.</p>
+        <p>{{count}} seconds remaining.</p>
+        <p>{{myDefaultImplicit}} OG Number as IMPLICIT</p>
     </section>
-    <ng-template #placeholder>
+
+    <ng-template #placeholder let-warning="crisis" let-msg="message" let-myDefault>
         <section class="placeholder">
-            <h2>Transitional Advice</h2>
-            <p>This will now remain here for a bit</p>
+            <h2>Permanent Advice</h2>
+            <p>This {{myDefault}} will now remain here.</p>
+            <p>{{msg}}</p>
         </section>
     </ng-template>
+
     <h2>{{getPrivateVar}}</h2>
     <button (click)="initSet()">RUN</button>
 </div>
+
