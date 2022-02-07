@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-structural-directive',
   templateUrl: './structural-directive.component.html',
@@ -9,8 +8,12 @@ export class StructuralDirectiveComponent implements OnInit {
 
   constructor() { }
 
+  mySentVal: number = 100;
 
   ngOnInit(): void {
+    setTimeout(()=> {
+      this.mySentVal = 200
+    }, 2000)
   }
 
 }

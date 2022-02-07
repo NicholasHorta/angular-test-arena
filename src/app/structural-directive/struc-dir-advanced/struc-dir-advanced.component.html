@@ -1,8 +1,8 @@
 <div>
     <h1>Structural Directives</h1>
-    <section *bannerHide="5000; after placeholder" class="banner">
+    <section *advancedDir="9000 as time; post placeholder" class="banner">
         <h2>Temporary Warning</h2>
-        <p>This warning will disappear in 5 seconds</p>
+        <p>This warning will disappear in {{time}} seconds</p>
     </section>
     <ng-template #placeholder>
         <section class="placeholder">
@@ -10,5 +10,6 @@
             <p>This will now remain here for a bit</p>
         </section>
     </ng-template>
-    <app-struc-dir-advanced [myRxVal]="mySentVal"></app-struc-dir-advanced>
+    <h2>{{getPrivateVar}}</h2>
+    <button (click)="initSet()">RUN</button>
 </div>
